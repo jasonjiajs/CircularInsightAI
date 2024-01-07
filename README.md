@@ -1,3 +1,4 @@
+An idea filter to evaluate submissions focused on circular economy challenges
 Step1: Data Split
 - Since we have 1300 rows of data, we randomly selected 100 rows as test(50), validation(50) and the rest as training data. The files of original data, splitted data and code to split data can be find in /Data
 
