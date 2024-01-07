@@ -5,7 +5,7 @@ import numpy as np
 import os
 import json
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="API code")
 
 data_path = "test_examples.jsonl"
 
