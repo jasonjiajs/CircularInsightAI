@@ -1,5 +1,5 @@
 Step1: Data Split
-- Since we have 1300 rows of data, we randomly selected 100 rows as test/validation and the rest as training data
+- Since we have 1300 rows of data, we randomly selected 100 rows as test(50), validation(50) and the rest as training data. The files of original data, splitted data and code to split data can be find in /Data
 
 Step2: Came up with 4 metrics: relevance of the problem, clarity of the problem, suitability of the solution, clarity of the solution
 - Manually Label ~125 rows of Train Data and all Test Data
