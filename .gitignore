@@ -1,1 +1,5 @@
 .env
+web_interface/.venv
+web_interface/__pycache__/
+web_interface/.DS_Store
+web_interface/secrets.toml
