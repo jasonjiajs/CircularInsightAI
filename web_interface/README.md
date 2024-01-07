@@ -9,15 +9,14 @@ This app showcases an AI tool built with GPT and ML techniques that aims to help
 Current examples include:
 
 - Idea Filter
-- - Allow evaluators to set a cut-off score to filter out ideas that are not relevant or too vague.
+  - Allow evaluators to set a cut-off score to filter out ideas that are not relevant or too vague.
 
 - Idea Enhancer
--- Assist evaluators to dive deep into the promising ideas and find the most innovative, feasible, and scalable idea.
--- Assist evaluators to expand on the promising ideas to be able to implement the ideas in real life.
+  - Assist evaluators to dive deep into the promising ideas and find the most innovative, feasible, and scalable idea.
+  - Assist evaluators to expand on the promising ideas to be able to implement the ideas in real life.
 
 ## Demo App
-https://circularinsightai.streamlit.app/
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-examples.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://circularinsightai.streamlit.app/)
 
 ### Get an OpenAI API key
 
