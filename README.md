@@ -1,3 +1,9 @@
+# CircularInsightAI
+Hackathon Project - AI EarthHack <br>
+Team Members: [Jason Jia](https://www.linkedin.com/in/jasonjiajs/), [Maria Besedovskaya](https://www.linkedin.com/in/mariabesedovskaya/), [Nuobei Zhang](https://www.linkedin.com/in/nuobeizhang/), [Xidan Xu](https://www.linkedin.com/in/xidan-xu/)
+
+## 
+
 An overview of what each folder and file do:
 
 /Data
