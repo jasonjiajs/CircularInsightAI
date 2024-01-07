@@ -19,12 +19,10 @@ def read_data(filepath, nrows_to_keep=None):
 
 def get_category(df):
     # Load the kmeans model
-    # print current directory
-    st.write(os.getcwd())
-    with open('kmeans/kmeans.pkl', 'rb') as file:
+    with open('web_interface/kmeans/kmeans.pkl', 'rb') as file:
         kmeans = pickle.load(file)
 
-    with open('kmeans/vectorizer.pkl', 'rb') as file:
+    with open('web_interface/kmeans/vectorizer.pkl', 'rb') as file:
         vectorizer = pickle.load(file)
     
     # Pre-process data
