@@ -7,3 +7,4 @@ trubrics>=1.4.3
 streamlit-feedback
 matplotlib
 seaborn
+deprecation
