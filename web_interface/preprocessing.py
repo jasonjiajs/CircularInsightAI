@@ -6,6 +6,7 @@ import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 import pickle
+import streamlit as st
 
 def read_data(filepath, nrows_to_keep=None):
     if nrows_to_keep is not None:
@@ -18,10 +19,12 @@ def read_data(filepath, nrows_to_keep=None):
 
 def get_category(df):
     # Load the kmeans model
-    with open('./kmeans/kmeans.pkl', 'rb') as file:
+    # print current directory
+    st.write(os.getcwd())
+    with open('kmeans/kmeans.pkl', 'rb') as file:
         kmeans = pickle.load(file)
 
-    with open('./kmeans/vectorizer.pkl', 'rb') as file:
+    with open('kmeans/vectorizer.pkl', 'rb') as file:
         vectorizer = pickle.load(file)
     
     # Pre-process data
