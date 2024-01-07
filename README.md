@@ -6,23 +6,29 @@ Team Members: [Jason Jia](https://www.linkedin.com/in/jasonjiajs/), [Maria Besed
 
 ## Overview
 
-An overview of what each folder and file do:
+An overview of what each folder and file does:
 
-`/Data`
-- consist of original data, splited data, and code to split data. It also has the manually labeled data set which was used as ground truth
-- /Json: consists of JSON version of the CSV file
+`/data`
 
-`/Preprocessing`
-- Code to convert CSV file into JSON file, the JSON data file are saved in /Data
+- Consists of original data, splited data, and code to split data. It also has the manually labeled data set which was used as ground truth
+- `data/json`: consists of JSON version of the CSV file
+
+`/preprocessing`
+
+- Code to convert CSV file into JSON files, which are saved in `data/json`
 
 `/finetuned_model_test`
-- consist of LLM fine-tune test file, code that generated the plot and accuracy rate
+
+- Consists of LLM fine-tuning test files and code that generated the plots and accuracy rates
 
 `/web_interface`
-- **Everything you need to run Streamlit**
+
+- Self-contained folder containing all code and resources needed to run the Streamlit web interface
 
 `/clusters`
-- code of the k-mean method to get the categories of the ideas
+
+- Code of k-means method to get categories of ideas
 
 `/api_key_test`
-- code to test the GPT API key
+
+- Code to test the GPT API key
