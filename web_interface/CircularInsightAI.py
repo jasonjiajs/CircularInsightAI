@@ -93,7 +93,7 @@ def split_frame(input_df, rows):
 
 @st.cache_data(show_spinner=False)
 def get_df_with_filter_metrics(uploaded_file):
-    df_full, df = preprocessing.read_data(uploaded_file, nrows_to_keep=25) # reduce the number of rows during development
+    df_full, df = preprocessing.read_data(uploaded_file, nrows_to_keep=None) # reduce the number of rows during development, e.g. nrows_to_keep=5
     df_full = preprocessing.get_category(df_full)
     df_with_filter_metrics = preprocessing.get_metrics_for_filtering_ideas(df_full, df, client, finetuned=True)
     return df_full, df, df_with_filter_metrics
