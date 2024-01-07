@@ -24,7 +24,7 @@ An overview of what each folder and file does:
 `/web_interface`
 
 - Self-contained folder containing all files needed to run the Streamlit web interface
-- To run the web interface locally, `cd` to `./web_interface` and run `streamlit run CircularInsightAI.py`.
+- To run the web interface locally, `cd` to the root of this repo and run `streamlit run web_interface/CircularInsightAI.py`.
 
 `/clusters`
 
