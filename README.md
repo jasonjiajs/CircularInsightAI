@@ -11,3 +11,6 @@ Step2: Came up with 4 metrics: relevance of the problem, clarity of the problem,
 - Non Fine Tune Approach:
   1. Use LLM to label Test Data
 - Then we will compare the accuracy to decide which version of LLM to use.
+- These metrics are used as a negative filter, ideas with low scores should be flagged or filtered out, however, ideas with high scores don't necessarily mean much(means is not wrong)
+  
+Step3: Label the problems to 1 of the 5 categories: Food Waste, Plastic Waste, 
