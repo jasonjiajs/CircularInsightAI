@@ -16,7 +16,7 @@ Current examples include:
   - Assist evaluators to expand on the promising ideas to be able to implement the ideas in real life.
 
 ## Demo App
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://circularinsightai.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://circularinsightai-ai-earthhack.streamlit.app/)
 
 ### Get an OpenAI API key
 
