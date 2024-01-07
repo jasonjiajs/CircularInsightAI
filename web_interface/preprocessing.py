@@ -68,11 +68,13 @@ def get_metrics_for_filtering_ideas(df_full, df, client, finetuned=True):
 
 def get_metrics_for_ranking_ideas(df_full, df, client, finetuned=False):
     df_dict = df.to_dict(orient='records') # Process df into list of dictionaries
-    system_content = "You are a strict venture capital expert evaluating potential circular economy startup pitches. \
+    system_content = "You are a venture capital expert evaluating potential circular economy startup pitches. \
     Evaluate the following problems and solutions using the following metrics: \
     market potential, feasibility, scalability, technological innovation, \
     alignment with circular economy principles and novelty. \
     For each metric return a score from 1 to 5, where 1 is very bad and 5 is very good. \
+    Also, for each metric, provide a sentence explaining why you gave the evaluation. \
+    Finally, for each metric, provide a sentence giving advice on how the idea can be improved. \
     Here are the criteria: \
     ------ \
     Market Potential: \
@@ -118,10 +120,13 @@ def get_metrics_for_ranking_ideas(df_full, df, client, finetuned=False):
     5: Extremely novel, groundbreaking and highly unique. \
     ------ \
     Return the scores as the following fields in a JSON dict: \
-    market_potential, feasibility, scalability, innovation, alignment, novelty. \
-    Don't be afraid to give low scores. \
+    market_potential, feasibility, scalability, innovation, alignment, novelty, \
+    market_potential_eval, feasibility_eval, scalability_eval, innovation_eval, alignment_eval, novelty_eval, \
+    market_potential_advice, feasibility_advice, scalability_advice, innovation_advice, alignment_advice, novelty_advice. \
+    Don't be afraid to give low scores and give direct feedback. \
     "
     df_metrics = get_metrics(df_dict, client, system_content, finetuned)
     df_metrics = pd.concat([df_full.reset_index(drop=True), df_metrics.reset_index(drop=True)], axis=1)
     df_metrics['overall_score'] = df_metrics[['market_potential', 'feasibility', 'scalability', 'innovation', 'alignment', 'novelty']].mean(axis=1)
     return df_metrics
+

@@ -73,7 +73,7 @@ class Modal:
 
             div[data-modal-container='true'][key='{self.key}'] > div:first-child > div:first-child {{
                 width: unset !important;
-                background-color: #fff;
+                background-color: black;
                 padding: {self.padding}px;
                 margin-top: {2*self.padding}px;
                 margin-left: -{self.padding}px;
