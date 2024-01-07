@@ -1,21 +1,15 @@
-# 🎈 Streamlit + LLM Examples App
+# 🎈CircularInsightAI App
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)
 
-Starter examples for building LLM apps with Streamlit.
-
 ## Overview of the App
 
-This app showcases a growing collection of LLM minimum working examples.
+This app showcases an AI tool built with GPT and ML techniques that aims to help evaluators filter and score ideas.
 
 Current examples include:
 
-- Chatbot
-- File Q&A
-- Chat with Internet search
-- LangChain Quickstart
-- LangChain PromptTemplate
-- Chat with user feedback
+- Idea Filter
+- Idea Enhancer
 
 ## Demo App
 
