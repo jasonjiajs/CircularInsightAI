@@ -6,7 +6,6 @@ import os
 import json
 import preprocessing
 import altair as alt
-from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 import matplotlib.pyplot as plt
 import seaborn as sns
 import random
