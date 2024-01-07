@@ -2,25 +2,27 @@
 Hackathon Project - AI EarthHack <br>
 Team Members: [Jason Jia](https://www.linkedin.com/in/jasonjiajs/), [Maria Besedovskaya](https://www.linkedin.com/in/mariabesedovskaya/), [Nuobei Zhang](https://www.linkedin.com/in/nuobeizhang/), [Xidan Xu](https://www.linkedin.com/in/xidan-xu/)
 
-## 
+![](readme_banner.jpeg)
+
+## Overview
 
 An overview of what each folder and file do:
 
-/Data
+`/Data`
 - consist of original data, splited data, and code to split data. It also has the manually labeled data set which was used as ground truth
 - /Json: consists of JSON version of the CSV file
 
-/Preprocessing
+`/Preprocessing`
 - Code to convert CSV file into JSON file, the JSON data file are saved in /Data
 
-/finetuned_model_test
+`/finetuned_model_test`
 - consist of LLM fine-tune test file, code that generated the plot and accuracy rate
 
-/web_interface
+`/web_interface`
 - **Everything you need to run Streamlit**
 
-/clusters
+`/clusters`
 - code of the k-mean method to get the categories of the ideas
 
-/api_key_test
+`/api_key_test`
 - code to test the GPT API key
