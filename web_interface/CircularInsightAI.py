@@ -20,6 +20,7 @@ with st.sidebar:
 
     st.write("## How to use this app")
     st.markdown("""
+        - Use dark mode for better readability
         - Gain context from the current macro outlook
         - Upload a CSV file with your ideas  
         - Filter out irrelevant and unclear ideas  
@@ -28,8 +29,7 @@ with st.sidebar:
         - Export best ideas to a CSV file  
         - Share your circular economy business ideas with us!""")
 
-    st.write("## Documentation")
-    "[View the source code](https://github.com/jasonjiajs/CircularInsightAI)"
+    "[View source code](https://github.com/jasonjiajs/CircularInsightAI)"
 
 # Set up OpenAI client
 if os.environ.get("OPENAI_API_KEY") is not None:
@@ -94,7 +94,7 @@ def split_frame(input_df, rows):
 @st.cache_data(show_spinner=False)
 def get_df_with_filter_metrics(uploaded_file):
     df_full, df = preprocessing.read_data(uploaded_file, nrows_to_keep=25) # reduce the number of rows during development
-    df_full['category'] = preprocessing.get_category(df_full)
+    df_full = preprocessing.get_category(df_full)
     df_with_filter_metrics = preprocessing.get_metrics_for_filtering_ideas(df_full, df, client, finetuned=True)
     return df_full, df, df_with_filter_metrics
 

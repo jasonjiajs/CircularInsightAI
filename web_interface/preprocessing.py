@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 import os
 import json
-import streamlit as st
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+import pickle
 
 def read_data(filepath, nrows_to_keep=None):
     if nrows_to_keep is not None:
@@ -14,9 +16,35 @@ def read_data(filepath, nrows_to_keep=None):
     df = df_full[['problem', 'solution']]
     return df_full, df
 
-def get_category(df_full):
-    categories = np.random.choice(['Plastics', 'Fashion', 'Food', 'Others'], size=len(df_full)) 
-    return categories
+def get_category(df):
+    # Load the kmeans model
+    with open('kmeans/kmeans.pkl', 'rb') as file:
+        kmeans = pickle.load(file)
+
+    with open('kmeans/vectorizer.pkl', 'rb') as file:
+        vectorizer = pickle.load(file)
+    
+    # Pre-process data
+    df_problem_statements = df['problem'].dropna().values
+
+    # Vectorize problems using the same vectorizer
+    df_problem_statements = vectorizer.transform(df_problem_statements)
+
+    # Predict the cluster labels for the test data
+    clusters = kmeans.predict(df_problem_statements)
+
+    # Apply mapping to the cluster labels (0,1,2,3,4)
+    cluster_mapping = {
+    0: "Other/General Waste",
+    1: "Plastic Waste",
+    2: "Clothing/Textile Waste",
+    3: "E-waste",
+    4: "Food Waste"
+    }
+    
+    df['category'] = np.array([cluster_mapping[cluster] for cluster in clusters])
+
+    return df
 
 def get_response(client, system_content, user_content, finetuned=False):
     if finetuned:
