@@ -110,7 +110,7 @@ def get_df_metrics(df_with_filter_metrics, filter_score):
 def get_filter_message(df_with_filter_metrics, score, score_type):
     score_var = score_type + '_score'
     df_filtered = df_with_filter_metrics.loc[df_with_filter_metrics[score_var] >= score]
-    filtered_nrows, nrows, pct = df_filtered.shape[0], df_with_filter_metrics.shape[0], df_filtered.shape[0] / df_with_filter_metrics.shape[0] * 100
+    filtered_nrows, nrows, pct = df_filtered.shape[0], df_with_filter_metrics.shape[0], round(df_filtered.shape[0] / df_with_filter_metrics.shape[0] * 100, 1)
     message = f"With a {score_type} score of {score}, you will keep {filtered_nrows} out of {nrows} ideas, or {pct}% of all ideas."
     return message
 
