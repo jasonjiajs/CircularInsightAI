@@ -8,7 +8,7 @@ Team Members: [Jason Jia](https://www.linkedin.com/in/jasonjiajs/), [Maria Besed
 We built [CircularInsightAI](https://circularinsightai-ai-earthhack.streamlit.app/), an AI-powered system that innovatively evaluates circular economy ideas using a multi-faceted filter and enhancer approach. It is designed to empower investors in making efficient and informed assessments.
 
 ## Documentation
-https://docs.google.com/document/d/1gNMZ4yrDLwVwqaGnleMvuPU7mQ7gQR77j5N13ePDV28/edit?usp=sharing
+- Link to [Final Report](https://docs.google.com/document/d/1gNMZ4yrDLwVwqaGnleMvuPU7mQ7gQR77j5N13ePDV28/edit?usp=sharing)
 
 ## Repo Directory
 
